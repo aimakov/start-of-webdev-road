@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Arrays</title>
+    </head>
+    
+    <body>
+        <p id="myParagraph">JavaScript<p>
+        <script>
+//            var shoppinglist = ["bread","eggs","milk"];
+            
+            var shoppinglist = new Array("bread","eggs","milk")
+            
+            showResult(shoppinglist[0]);
+            showResult(shoppinglist[1]);
+            showResult(shoppinglist[2]);
+            
+           
+//            alert(shoppinglist[1]);
+            showResult(shoppinglist);
+            
+            shoppinglist.splice(1,1);
+            showResult(shoppinglist);
+            
+            shoppinglist.splice(1,0,"apple");
+            showResult(shoppinglist);
+            
+            shoppinglist.reverse();
+            showResult(shoppinglist);
+            
+            shoppinglist.sort();
+            showResult(shoppinglist);
+            
+            var myString = "AB CD";
+            
+            var myArray = myString.split(" ");
+            showResult(myArray);
+            
+            function showResult(x){
+                document.getElementById("myParagraph").innerHTML += "<br />" + x;
+            }
+            
+        </script>
+
+    </body>
+</html>

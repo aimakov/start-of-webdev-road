@@ -1,0 +1,194 @@
+html{
+    height: 100%;
+    background: radial-gradient(circle,white,gray); 
+}
+
+#container{
+    height: 450px;
+    width: 550px;
+    background-color: #9DD2EA;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px 0px #009de4;
+    -webkit-box-shadow: 0px 4px 10px 0px #009de4;
+    -moz-box-shadow: 0px 4px 10px 0px #009de4;
+    position: relative;
+}
+
+#score{
+    background-color: yellow;
+    color: #888E5F;
+/*    float: right;*/
+    padding: 7px;
+    border-radius: 5px;
+    position: absolute;
+    left: 505px;
+    box-shadow: 0px 4px 5px 0px #9da853;
+    -webkit-box-shadow: 0px 4px 5px 0px #9da853;
+    -moz-box-shadow: 0px 4px 5px 0px #9da853;
+    
+}
+
+#correct{
+    position: absolute;
+    left: 260px;
+    background-color: greenyellow;
+    padding: 7px;
+    color: white;
+    border-radius: 5px;
+    display: none;
+}
+
+#wrong{
+    position: absolute;
+    left: 260px;
+    background-color: orangered;
+    padding: 7px;
+    color: white;
+    border-radius: 5px;
+    display: none;
+}
+
+#question{
+    margin: 50px auto 10px auto;
+    width: 450px;
+    height: 160px;
+    background-color: azure;
+    border-radius: 20px;
+    box-shadow: 0px 4px 5px 0px #535aa8;
+    -webkit-box-shadow: 0px 4px 5px 0px #535aa8;
+    -moz-box-shadow: 0px 4px 5px 0px #535aa8;
+    font-size: 100px;
+    text-align: center;
+    font-family: cursive, sans-serif;
+    color: black;
+}
+
+#instruction{
+    width: 450px;
+    height: 50px;
+    background-color: #B481D9;
+    margin: 10px auto;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 45px;
+    box-shadow: 0px 4px 10px 0px #8153a8;
+    -moz-box-shadow: 0px 4px 10px 0px #8153a8;
+    -webkit-box-shadow: 0px 4px 10px 0px #8153a8;
+}
+
+#choices {
+    height: 100px;
+    width: 450px;
+    margin: 5px auto;
+}
+
+.box{
+    width: 85px;
+    height: 85px;
+    background-color: white;
+    float: left;
+    margin-right: 36px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 4px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0px 4px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 4px rgba(0,0,0,0.2);
+    text-align: center;
+    line-height: 85px;
+    position: relative;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    
+}
+
+.box:hover, #startreset:hover{
+    background-color: plum;
+    box-shadow: 0px 4px purple;
+    -webkit-box-shadow: 0px 4px purple;
+    -moz-box-shadow: 0px 4px purple;
+    
+}
+
+.box:active, #startreset:active{
+    box-shadow: none;
+    top: 4px;
+    
+}
+
+#box4{
+    margin-right: 0px;
+}
+
+#startreset{
+    width: 85px;
+    padding: 10px;
+    background-color: rgba(255,255,255,0.5);
+    margin: 20px auto;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0px 4px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0px 4px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 4px rgba(0,0,0,0.2);
+    text-align: center;
+    position: relative;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+}
+
+#timeremaining{
+    width: 130px;
+    padding: 10px;
+    position: absolute;
+    border-radius: 10px;
+    top: 420px;
+    left: 420px;
+    text-align: center;
+    background-color: rgba(181, 235, 36, 0.78);
+    
+    box-shadow: 0px 4px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0px 4px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 4px rgba(0,0,0,0.2);
+    
+    visibility: hidden;
+
+}
+
+#gameover{
+    
+    height: 200px;
+    width: 500px;
+    background: linear-gradient(yellow,orange);
+/*
+    color: white;
+    font-size: 2.5em;
+    text-align: center;
+    text-transform: uppercase;
+*/
+    position: absolute;
+    top: 150px;
+    left: 45px;
+    border-radius: 20px;
+    z-index: 2;
+    display: none;
+    
+}
+
+#gameovertext{
+    padding-top: 15px; 
+    color: white;
+    font-size: 2.5em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+

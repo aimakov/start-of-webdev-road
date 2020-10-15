@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+    
+        <meta charset="utf-8">
+        <title>Variables and Data types</title>
+    
+    </head>
+    
+    <style>
+        
+        .bluebox{
+            background-color: #4267B2;
+            color: white;
+            height: 100px;
+            width: auto;
+            
+        }
+        
+        .yellowbox{
+            background-color: rgb(224, 218, 60);
+            height: 100px;
+            width: auto;
+        }
+        
+        .greenbox{
+            background-color: #68c945;
+            height: 100px;
+            width: auto;
+                
+        }
+        
+        .great{
+            background-color: #e4e06c;
+            color: black;
+        }
+        
+    </style>
+    
+    <body>
+        <div class="bluebox" id="facebook">
+            <p>Facebook is <span class="great">great</span>.</p>
+        </div>
+        <div class="yellowbox" id="apple">
+            <p>Apple</p>
+        </div>
+        <div class="greenbox">
+            <p>Microsoft</p>
+        </div>
+        
+        <button id="button1">Change Facebook style</button>
+        <button id="button2">Change Apple style</button>
+        
+        <script>
+        
+            var x = 3;
+            window.console.log(x);
+            
+            var y;
+            y=5;
+            
+            window.console.log(y);
+            
+            var z;
+            z = x + y;
+            window.console.log("The type of z is " + typeof(z));
+            window.console.log("The value of z is " + z);
+            
+            var greeting = "Hello";
+            var firstname = "John";
+            
+            var message = greeting + " " + firstname;
+            
+            var check = (x==3)
+            
+            window.console.log("The check is: " + check);
+            
+            
+        </script>
+        
+    </body>
+
+</html>

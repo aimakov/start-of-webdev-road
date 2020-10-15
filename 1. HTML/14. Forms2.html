@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        
+        <meta charset="utf-8">
+        <title>Forms</title>
+        
+    
+    </head>
+    
+    <body>
+        <form method="get">
+            <label for="address">Address</label>
+            <input type="text" name="address" id="address" placeholder="Address" size="30px" maxlength="100">
+            <br/>
+            
+            <label for="postcode">Postcode</label>
+            <input type="text" name="postcode" id="postcode" size="30px" maxlength="100" placeholder="Postcode">
+            
+            <br/>
+            <label for="city">City</label>
+            <input type="text" name="city" id="city" size="30px" maxlength="100" placeholder="City">
+            
+            <p>Choose your shipping method:</p>
+            
+            <select name="shipping" id="shipping">
+                <option value="Free super saver shipping">Free super saver shipping</option>
+                <option value="Two day shipping">Two day shipping</option>
+                <option value="One day shipping">One day shipping</option>
+            </select>
+            
+            <p>Choose your payment method:</p>
+            
+            <label>Paypal<input type="radio" name="payments" value="PayPal"></label>
+            
+            <label>Debit Card<input type="radio" name="payments" value="Debit Card"></label>
+            
+            <label>Credit Card<input type="radio" name="payments" value="Credit Card"></label>
+            
+            <br/>
+            <label for="comments">Comments:</label>
+            <textarea rows="4" cols="40" name="comments" id="comments"></textarea>
+            
+            <br/>
+            <label>Sign me for email updates<input type="checkbox" name="email updates" id="updates"></label>
+            
+            <br/>
+            <label>Securely save my payment details<input type="checkbox" name="save payment"></label>
+            
+            
+            <input type="submit" value="Submit">
+            
+        </form>
+    </body>
+    
+</html>

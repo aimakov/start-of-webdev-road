@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+    
+        <meta charset="utf-8">
+        <title>Selectable</title>
+    
+        
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        
+    </head>
+    
+    <style>
+        
+        .bluebox{
+            background-color: #4267B2;
+            color: white;
+            height: 100px;
+            width: auto;
+            margin-bottom: 10px;
+            
+        }
+        
+        .yellowbox{
+            background-color: rgb(224, 218, 60);
+            height: auto;
+            width: auto;
+            padding: 5px;
+        }
+        
+        .greenbox{
+            background-color: #68c945;
+            height: auto;
+            width: auto;
+            padding: 2px;
+                
+        }
+        
+        .great{
+/*            background-color: #e4e06c;*/
+/*            color: black;*/
+        }
+        
+        .sans-serif{
+            font-family: sans-serif;
+        }
+        
+        li{
+            font-size: 2em;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+        
+        #list .ui-selecting{
+            background: purple;
+        }
+        
+        #list .ui-selected{
+            background: red;
+            color: white;
+        }
+        
+        .connectedlist{
+            border: 1px solid;
+            min-height: 50px;
+        }
+        
+    </style>
+    
+    <body>
+        
+        
+        <div class="bluebox" id="facebook">
+            <p>Facebook is <span class="great" id="great">great</span>.</p>
+        </div>
+        <div class="yellowbox sans-serif ui-corner-all" id="apple">
+            <ul id="list" class="connectedlist">
+            
+                <li class="ui-state-default">Audi</li>
+                <li class="ui-state-default">BMW</li>
+                <li class="ui-state-default notsortable" >Mercedes</li>
+            
+            </ul>
+        </div>
+        <div class="greenbox ui-corner-all" id="microsoft">
+            <p id="microsoftparagraph">Microsoft</p>
+            <p><a href="http://www.youtube.com" id="link">Go to youtube</a></p>
+            <ul id="list1" class="connectedlist">
+            
+                <li class="ui-state-default">Hyundai</li>
+                <li class="ui-state-default">Tesla</li>
+                <li class="ui-state-default" >Ferrari</li>
+            
+            </ul>
+        </div>
+
+        
+        <script>
+            $(function(){
+                 $("#list").sortable({
+                     placeholder: "ui-state-highlight",
+                     cancel: ".notsortable"
+                 });
+                
+                $("#list1").sortable();
+                $("#list, #list1").sortable({
+                    connectWith: ".connectedlist"
+                });
+                
+              });
+        </script>
+        
+    </body>
+
+</html>

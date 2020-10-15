@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+    
+        <meta charset="utf-8">
+        <title>Inline CSS</title>
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+    </head>
+    
+    <style>
+        
+        .bluebox{
+            background-color: #4267B2;
+            color: white;
+            height: 100px;
+            width: auto;
+            
+        }
+        
+        .yellowbox{
+            background-color: rgb(224, 218, 60);
+            height: 100px;
+            width: auto;
+        }
+        
+        .greenbox{
+            background-color: #68c945;
+            height: 100px;
+            width: auto;
+                
+        }
+        
+        .great{
+            background-color: #e4e06c;
+            color: black;
+        }
+        
+    </style>
+    
+    <body>
+        <div class="bluebox" id="facebook">
+            <p>Facebook is <span class="great">great</span>.</p>
+        </div>
+        <div class="yellowbox" id="apple">
+            <p >Apple</p>
+        </div>
+        <div class="greenbox">
+            <p>Microsoft</p>
+            <p><a href="http://www.youtube.com" id="link">Go to youtube</a></p>
+        </div>
+        
+        <p><input type="text"></p>
+        
+        <button id="changefacebook">Change Facebook text</button>
+        <button id="changeapple">Change Apple html</button>
+        <button id="changeinputvalue">Change input</button>
+        <button id="changelink">Change Link to Google</button>
+        
+        <script>
+            $(function(){
+                $("#changefacebook").click(function(){
+                    $("#facebook p").text("Apple is changed");
+                });
+                
+                $("#changeapple").click(function(){
+                    $("#apple").html("<p> Apple is trash<p/><p>New iOS available<p/>");
+                });
+                
+                $("#changeinputvalue").click(function(){
+                    $("input").val("Nurba");
+                });
+                
+                $("#changelink").click(function(){
+                    $("#link").attr({"href" : "http://google.com"});
+                    $("#link").html("Go to Google");
+                });
+              });
+        </script>
+        
+    </body>
+
+</html>

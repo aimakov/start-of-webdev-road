@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+    
+        <meta charset="utf-8">
+        <title>Ajax</title>
+    
+        
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        
+    </head>
+    
+    <style>
+        
+        .bluebox{
+            background-color: #4267B2;
+            color: white;
+            height: 100px;
+            width: auto;
+            
+        }
+        
+        .yellowbox{
+            background-color: rgb(224, 218, 60);
+            height: 100px;
+            width: auto;
+        }
+        
+        .greenbox{
+            background-color: #68c945;
+            height: 100px;
+            width: auto;
+                
+        }
+        
+        .great{
+/*            background-color: #e4e06c;*/
+/*            color: black;*/
+        }
+        
+        .sans-serif{
+            font-family: sans-serif;
+        }
+        
+        #droppable{
+            height: 300px;
+            background-color: purple;
+            width: auto;
+            margin-top: 20px;
+            color: white;
+        }
+
+        
+    </style>
+    
+    <body>
+        
+        
+        <div class="bluebox ui-corner-all" id="facebook">
+<!--            <p>Facebook is <span class="great" id="great">great</span>.</p>-->
+            <p>Facebook is .</p>
+            
+        </div>
+        
+        <div class="yellowbox sans-serif ui-corner-all" id="apple">
+            <ul id="applelist">
+                <li>Eggs</li>
+                <li>Milk</li>
+                <li>Bread</li>
+            </ul>
+        </div>
+        
+        <div class="greenbox ui-corner-all" id="microsoft">
+            <p id="microsoftparagraph">Microsoft</p>
+            
+            <p id="youtube"><a href="http://www.youtube.com" id="link">Go to youtube</a></p>
+        </div>
+        
+        <div id="droppable" class="ui-corner-all"><p>You can drop things here</p></div>
+        
+        
+        
+        <script>
+            
+            var message = ["drop me here","leave me alone","stop it"];
+            
+            $(function(){
+                $("#facebook").draggable({revert: true});
+                
+                $("#apple").draggable({axis: "y", revert: true});
+                
+                $("#microsoft").draggable({
+                    revert: true,
+                    start: function(){
+                        $("#facebook").css("background-color","purple"); 
+                       
+                       $("#microsoft").css("background-color","rgba(" + 255*Math.random() + "," + 255*Math.random() + "," + 255*Math.random() + ")");
+                        $("#microsoft").find("#microsoftparagraph").html(message[Math.round((message.length-1)*Math.random())]);
+                    },
+                    drag: function(){
+//                        $("#microsoft").css("background-color","rgba(" + 255*Math.random() + "," + 255*Math.random() + "," + 255*Math.random() + ")");
+                        
+//                        window.alert(message.length());
+                        
+                    },
+                    
+                    stop: function(){
+                        $("#apple").css("background-color","rgba(" + 255*Math.random() + "," + 255*Math.random() + "," + 255*Math.random() + ")");
+                        $("#facebook").css("background-color","");
+                        $("#microsoft").find("#microsoftparagraph").html("Finally");
+                    },
+                });
+                
+                $("#droppable").droppable({
+                    drop: function(){
+                        $(this).css("background-color","red");
+                        $(this).find("p").remove();
+                        $("<li></li>").text(ui.draggable.text()).appendTo(this);
+                    },
+                    accept: "#applelist li"
+                });
+                
+                $("#applelist").find("li").draggable({
+                    helper: "clone",
+                    appendTo: "body"
+                });
+                
+              });
+        </script>
+        
+    </body>
+
+</html>

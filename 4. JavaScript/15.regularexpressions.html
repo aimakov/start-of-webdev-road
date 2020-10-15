@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Regular Expressions</title>
+    </head>
+    
+    <body>
+        
+        
+        
+        <p id="myParagraph"></p>
+        <p>String: <span id="string"></span></p>
+        <p>Pattern: <span id="pattern"></span></p>
+        <p>Search result: <span id="search"></span></p>
+        <p>Match result: <span id="match"></span></p>
+        <p>Test result: <span id="test"></span></p>
+        <script>
+            var str = "Atlanta 57837 5%"
+            var pattern = /\n/g;
+//            var pattern = /\d{4}/g;
+//            var pattern = /[4-7]/g;
+//            var pattern = /[^atn]/g;
+//            var pattern = new RegExp("a","g")
+            
+            document.getElementById("string").innerHTML = str;
+            document.getElementById("pattern").innerHTML = pattern;
+            document.getElementById("search").innerHTML = str.search(pattern);
+            document.getElementById("match").innerHTML = str.match(pattern);
+            document.getElementById("test").innerHTML = pattern.test(str);
+            
+            
+            
+        </script>
+
+    </body>
+</html>

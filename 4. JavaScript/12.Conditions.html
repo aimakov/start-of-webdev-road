@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Conditions</title>
+    </head>
+    
+    <body>
+        
+        
+        
+        <p>Your speed <input id="speed" type="number"> <button onclick="checkspeed()">Check</button> </p>
+        
+        <script>
+            function checkspeed()
+            {
+                var speed = document.getElementById("speed").value;
+                
+//                if (speed>70)
+//                    {
+//                        window.alert("Your speed is too high")
+//                    }
+//                else if(speed<40)
+//                    {
+//                        window.alert("Your speed is too low")
+//                    }
+//                else
+//                    {
+//                        window.alert("Your speed is okay")
+//                    }
+                
+                switch(speed)
+                    {
+                        case "speed>70":
+                            window.alert("Your speed is too high");
+                            break;
+                        case (speed<40):
+                            window.alert("Your speed is too low");
+                            break;
+                        default:
+                            window.alert("Your speed is okay");
+                            break;                    }
+            }
+        </script>
+
+    </body>
+</html>

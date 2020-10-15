@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+    
+        <meta charset="utf-8">
+        <title>Ajax</title>
+    
+        
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        
+    </head>
+    
+    <style>
+        
+        .bluebox{
+            background-color: #4267B2;
+            color: white;
+            height: 100px;
+            width: auto;
+            
+        }
+        
+        .yellowbox{
+            background-color: rgb(224, 218, 60);
+            height: 100px;
+            width: auto;
+        }
+        
+        .greenbox{
+            background-color: #68c945;
+            height: 100px;
+            width: auto;
+                
+        }
+        
+        .great{
+/*            background-color: #e4e06c;*/
+/*            color: black;*/
+        }
+        
+        .sans-serif{
+            font-family: sans-serif;
+        }
+        
+
+        
+    </style>
+    
+    <body>
+        
+        
+        <div class="bluebox" id="facebook">
+            <p>Facebook is <span class="great" id="great">great</span>.</p>
+        </div>
+        <div class="yellowbox sans-serif ui-corner-all" id="apple">
+            <p >Apple</p>
+        </div>
+        <div class="greenbox ui-corner-all" id="microsoft">
+            <p id="microsoftparagraph">Microsoft</p>
+            <p><a href="http://www.youtube.com" id="link">Go to youtube</a></p>
+        </div>
+        
+        <div class="ui-state-error" style="height:100px;margin-top:20px ">
+            <p>Error Message</p>
+        </div>
+        
+        <script>
+            $(function(){
+                 $("#facebook").draggable();
+                
+              });
+        </script>
+        
+    </body>
+
+</html>

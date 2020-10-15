@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+    
+        <meta charset="utf-8">
+        <title>Resizable</title>
+    
+        
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        
+    </head>
+    
+    <style>
+        
+        .bluebox{
+            background-color: #4267B2;
+            color: white;
+            height: 100px;
+            width: auto;
+            
+        }
+        
+        .yellowbox{
+            background-color: rgb(224, 218, 60);
+            height: 100px;
+            width: auto;
+        }
+        
+        .greenbox{
+            background-color: #68c945;
+            height: 100px;
+            width: auto;
+                
+        }
+        
+        .great{
+/*            background-color: #e4e06c;*/
+/*            color: black;*/
+        }
+        
+        .sans-serif{
+            font-family: sans-serif;
+        }
+        
+        #applecontainer{
+            width: 300px;
+            height: 300px;
+            border-style: solid;
+        }
+        
+
+        
+    </style>
+    
+    <body>
+        
+        
+        <div class="bluebox ui-corner-all" id="facebook">
+            <p>Facebook is <span class="great" id="great">great</span>.</p>
+        </div>
+        <div id="applecontainer">
+        
+            <div class="yellowbox sans-serif ui-corner-all" id="apple">
+            <p >Apple</p>
+            </div>
+        
+        </div>
+        <div class="greenbox ui-corner-all" id="microsoft">
+            <p id="microsoftparagraph">Microsoft</p>
+            <p><a href="http://www.youtube.com" id="link">Go to youtube</a></p>
+        </div>
+        
+        
+        
+        <script>
+            $(function(){
+                $("#facebook").resizable({
+//                    minHeight: 50, 
+//                    maxHeight: 200,
+//                    minWidth: 100,
+//                    maxWidth: 300,
+//                    aspectRatio: 4/3,
+//                    ghost: true,
+                    alsoResize: "#microsoft"
+                });
+                
+                $("#apple").resizable({
+                    containment: "#applecontainer",
+                    animate: true
+                });
+            });
+        </script>
+        
+    </body>
+
+</html>

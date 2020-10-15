@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+    
+        <meta charset="utf-8">
+        <title>Ajax</title>
+    
+        
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/start/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        
+    </head>
+    
+    <style>
+        
+        .bluebox{
+            background-color: #4267B2;
+            color: white;
+            height: auto;
+            width: auto;
+            
+        }
+        
+        .yellowbox{
+            background-color: rgb(224, 218, 60);
+            height: auto;
+            width: auto;
+        }
+        
+        .greenbox{
+            background-color: #68c945;
+            height: 100px;
+            width: auto;
+                
+        }
+        
+        .great{
+/*            background-color: #e4e06c;*/
+/*            color: black;*/
+        }
+        
+        .sans-serif{
+            font-family: sans-serif;
+        }
+        
+        #droppable{
+            height: 300px;
+            background-color: purple;
+            width: auto;
+            margin-top: 20px;
+            color: white;
+        }
+        
+        .ui-autocomplete{
+            max-height: 100px;
+            overflow-y: auto;
+            max-width: 205px;
+            overflow-x: auto;
+        }
+        
+        #city{
+            width: 200px;
+        }
+        
+        div{
+            margin-bottom: 10px;
+        }
+        
+        .ui-menu{
+            width: 100px;
+        }
+
+        
+    </style>
+    
+    <body>
+        
+        
+        <div class="bluebox ui-corner-all" id="facebook">
+            <ul id="continent">
+                <li>Europe
+                    <ul>
+                        <li>France</li>
+                        <li>UK
+                            <ul>
+                                <li>England</li>
+                                <li>Wales</li>
+                                <li>Scotland</li>
+                                <li>Northern Ireland</li>
+                            </ul>
+                        </li>
+                        <li>Spain</li>
+                    </ul>
+                </li>
+                <li>Africa</li>
+                <li>America</li>
+                <li>Asia</li>
+                <li>Australia</li>
+            </ul>
+        </div>
+        
+        <div class="yellowbox sans-serif ui-corner-all" id="apple">
+            <ul id="continent2">
+                <li class="ui-widget-header">Europe</li>
+
+                        <li>France</li>
+                        <li>UK
+                            <ul>
+                                <li>England</li>
+                                <li>Wales</li>
+                                <li>Scotland</li>
+                                <li>Northern Ireland</li>
+                            </ul>
+                        </li>
+                        <li>Spain</li>
+
+
+                <li class="ui-widget-header">Africa</li>
+                <li class="ui-widget-header">America</li>
+                <li class="ui-widget-header">Asia</li>
+                <li class="ui-widget-header">Australia</li>
+            </ul>
+        </div>
+        
+        <div class="greenbox ui-corner-all" id="microsoft">
+
+        </div>
+
+        
+        <script>
+            
+            $(function(){
+                 $("#continent").menu();
+                 $("#continent2").menu();
+                
+                
+                 
+                
+                });
+        </script>
+        
+    </body>
+
+</html>

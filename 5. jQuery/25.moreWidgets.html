@@ -1,0 +1,159 @@
+
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+    
+        <meta charset="utf-8">
+        <title>Ajax</title>
+    
+        
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/start/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+        
+    </head>
+    
+    <style>
+        
+        .bluebox{
+            background-color: #4267B2;
+            color: white;
+            height: 100px;
+            width: auto;
+            
+        }
+        
+        .yellowbox{
+            background-color: rgb(224, 218, 60);
+            height: auto;
+            width: auto;
+        }
+        
+        .greenbox{
+            background-color: #68c945;
+            height: 100px;
+            width: auto;
+            margin-bottom: 30px;
+                
+        }
+        
+        .great{
+/*            background-color: #e4e06c;*/
+/*            color: black;*/
+        }
+        
+        .sans-serif{
+            font-family: sans-serif;
+        }
+        
+        #droppable{
+            height: 300px;
+            background-color: purple;
+            width: auto;
+            margin-top: 20px;
+            color: white;
+        }
+        
+        .ui-autocomplete{
+            max-height: 100px;
+            overflow-y: auto;
+            max-width: 205px;
+            overflow-x: auto;
+        }
+        
+        #city{
+            width: 200px;
+        }
+        
+        div{
+            margin-bottom: 10px;
+        }
+        
+        .ui-menu{
+            width: 100px;
+        }
+        
+        #label{
+            position: absolute;
+
+            left: 45%;
+        }
+        
+        
+        #sliderValue{
+            color: skyblue;
+            border: 0px;
+            font-weight: bold;
+
+        }
+        #sliderValue2{
+            color: skyblue;
+            border: 0px;
+            font-weight: bold;
+        }
+        
+    </style>
+    
+    <body>
+        
+        
+        <div class="bluebox ui-corner-all" id="facebook">
+            <p>
+                <label for="myInput">Enter a value: </label>
+                <input id="myInput" name="myInput" value="30" title="Please enter a value">
+            </p>
+        </div>
+        
+        <div class="yellowbox sans-serif ui-corner-all" id="apple">
+            <ul>
+                <li><a href="#content1">tab 1</a></li>
+                <li><a href="#content2">tab 2</a></li>
+                <li><a href="#content3">tab 3</a></li>
+            </ul>
+            
+            <div id="content1"><p>content1</p></div>
+            <div id="content2"><p>content2</p></div>
+            <div id="content3"><p>content3</p></div>
+
+        </div>
+        
+        <div class="greenbox ui-corner-all" id="microsoft" title="This is Microsoft">
+
+        </div>
+        
+        
+        <script>
+            
+            $(function(){
+                
+                    $("#myInput").spinner({
+                        min: 0,
+                        max: 100,
+                        step: 10
+                    });
+                
+                    $("#apple").tabs({
+                        collapsible: true,
+                        event: "mouseover",
+                        
+                    });
+                
+                    $("#apple").tabs().find(".ui-tabs-nav").sortable({
+                        axis: "x"
+//                        ghost: true
+                    });
+                
+//                    $(document).tooltip();
+                
+                    $("#myInput").tooltip({
+                        show: {effect: "slideDown"}
+                    });
+                
+                });
+        </script>
+        
+    </body>
+
+</html>

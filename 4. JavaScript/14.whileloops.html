@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Conditions</title>
+    </head>
+    
+    <body>
+        
+        
+        
+        <p id="myParagraph"></p>
+        
+        <script>
+            var balance = 1000;
+            var itemsbought = 0;
+            
+            while(balance>=0){
+                var itemprice = Math.round(Math.random()*100);
+                if (balance<itemprice)
+                    {
+                        document.getElementById("myParagraph").innerHTML += balance + " is not enough to buy " + itemprice;
+                        break;
+                    }
+                
+                document.getElementById("myParagraph").innerHTML += balance + " " + itemprice + "<br />";
+                balance -= itemprice;
+            }
+        </script>
+
+    </body>
+</html>

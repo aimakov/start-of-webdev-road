@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+    
+        <meta charset="utf-8">
+        <title>Inline CSS</title>
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        
+    </head>
+    
+    <style>
+        
+        .bluebox{
+            background-color: #4267B2;
+            color: white;
+            height: auto;
+            width: auto;
+            
+        }
+        
+        .yellowbox{
+            background-color: rgb(224, 218, 60);
+            height: 100px;
+            width: auto;
+        }
+        
+        .greenbox{
+            background-color: #68c945;
+            height: 100px;
+            width: auto;
+                
+        }
+        
+        .great{
+            background-color: #e4e06c;
+            color: black;
+        }
+        
+        h3{
+            padding: 10px 10px;
+        }
+        
+        p{
+            padding-left: 10px;
+        }
+        
+    </style>
+    
+    <body>
+        <div id="resizer" class="ui-widget-content">
+        <div class="bluebox ui-corner-all" id="facebook">
+            <h3>Section 1</h3>
+            
+            <div>
+                <p>Hyewon is pretty</p>
+                <p>Hyewon is pretty</p>
+                <p>Hyewon is pretty</p>
+                <p>Hyewon is pretty</p>
+                <p>Hyewon is pretty</p>
+            </div>
+            
+            <h3>Section 2</h3>
+            <div><p>Hyewon is cute</p></div>
+            <h3>Section 3</h3>
+            <div><p>Hyewon is amazing</p></div>
+            </div>
+        </div>
+
+        
+        
+        <div class="yellowbox ui-corner-all" id="apple">
+            <h3>Section 2</h3>
+            <div><p>Content2</p></div>
+        </div>
+        <div class="greenbox ui-corner-all">
+            <h3>Section 3</h3>
+            <div><p>Content3</p></div>
+        </div>
+  
+        
+        <script>
+            $(function(){
+                 $("#facebook").accordion({
+                     collapsible: true,
+                     icons: {
+                         header: "ui-icon-circle-arrow-e",
+                         activeHeader: "ui-icon-circle-arrow-s"
+                     },
+                     heightStyle: "fill"
+                 });
+                
+                $("#resizer").resizable({
+                    resize: function(){
+                        $("#facebook").accordion("refresh");
+                    }
+                });
+              });
+        </script>
+        
+    </body>
+
+</html>

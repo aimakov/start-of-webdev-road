@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Conditions</title>
+    </head>
+    
+    <body>
+        
+        
+        
+        <p>Your speed <input id="speed" type="number"> <button onclick="checkspeed()">Check</button> </p>
+        
+        <p id="hi">sdf</p>
+        
+        <script>
+            
+            
+            function checkspeed()
+            {
+                var speed = document.getElementById("speed").value;
+                for (i=0;i<speed;i++)
+                    {
+                        document.getElementById("hi").innerHTML += "<br />" + i;
+                    }
+            }
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+    
+        <meta charset="utf-8">
+        <title>Ajax</title>
+    
+        
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/blitzer/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        
+    </head>
+    
+    <style>
+        
+        .bluebox{
+            background-color: #4267B2;
+            color: white;
+            height: 100px;
+            width: auto;
+            
+        }
+        
+        .yellowbox{
+            background-color: rgb(224, 218, 60);
+            height: 100px;
+            width: auto;
+        }
+        
+        .greenbox{
+            background-color: #68c945;
+            height: 100px;
+            width: auto;
+                
+        }
+        
+        .great{
+/*            background-color: #e4e06c;*/
+/*            color: black;*/
+        }
+        
+        .sans-serif{
+            font-family: sans-serif;
+        }
+        
+        #droppable{
+            height: 300px;
+            background-color: purple;
+            width: auto;
+            margin-top: 20px;
+            color: white;
+        }
+        
+        .ui-autocomplete{
+            max-height: 100px;
+            overflow-y: auto;
+            max-width: 205px;
+            overflow-x: auto;
+        }
+        
+        #city{
+            width: 200px;
+        }
+
+        
+    </style>
+    
+    <body>
+        
+        
+        <div class="bluebox ui-corner-all" id="facebook">
+            
+            <div id="checkboxes">
+                <input type="checkbox" id="mycheckbox1">
+                <label for="mycheckbox1">BMW</label>
+                
+                <input type="checkbox" id="mycheckbox2">
+                <label for="mycheckbox2">Audi</label>
+                
+                <input type="checkbox" id="mycheckbox3">
+                <label for="mycheckbox3">Mercedes</label>
+            </div>
+            
+            <p>Facebook is <span class="great" id="great">great</span>.</p>
+            
+        </div>
+        <div class="yellowbox sans-serif ui-corner-all" id="apple">
+            <input type="checkbox" id="mycheckbox">
+            <label for="mycheckbox">Checkbox</label>
+        </div>
+        <div class="greenbox ui-corner-all" id="microsoft">
+            <form>
+                <div id="radioBoxes">
+                    <input type="radio" id="radiobox1" name="radioBoxes">
+                    <label for="radiobox1">Ford</label>
+                    
+                    <input type="radio" id="radiobox2" name="radioBoxes">
+                    <label for="radiobox2">Ferrari</label>
+                    
+                    <input type="radio" id="radiobox3" name="radioBoxes">
+                    <label for="radiobox3">Toyota</label>
+                </div>
+            </form>
+        </div>
+        
+        <button id="button1">Button1</button>
+        <button id="button2">Button2</button>
+        <button id="button3">Button3</button>
+        
+        
+        <script>
+            
+            $(function(){
+                 $("#button1").button();
+              
+            
+                $("#button2").button({
+                icons: {
+                    primary: "ui-icon-folder-open",
+                    secondary: "ui-icon-mail-closed"
+                        },
+                text: false
+                                    });
+            
+            $("#button3").button({
+                icons:  {
+                    primary: "ui-icon-gear", secondary: "ui-icon-gear"
+                        }
+                                });
+                
+            $("#mycheckbox").button();
+                
+            $("#checkboxes").buttonset();
+                
+            $("#radioBoxes").buttonset();
+                
+                });
+        </script>
+        
+    </body>
+
+</html>

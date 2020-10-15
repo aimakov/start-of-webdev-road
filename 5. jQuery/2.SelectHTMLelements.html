@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+    
+        <meta charset="utf-8">
+        <title>Inline CSS</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    
+    <style>
+        
+        .bluebox{
+            background-color: #4267B2;
+            color: white;
+            height: 100px;
+            width: auto;
+            
+        }
+        
+        .yellowbox{
+            background-color: rgb(224, 218, 60);
+            height: 100px;
+            width: auto;
+        }
+        
+        .greenbox{
+            background-color: #68c945;
+            height: auto;
+            width: auto;
+                
+        }
+        
+        .great{
+            background-color: #e4e06c;
+            color: black;
+        }
+        
+    </style>
+    
+    <body>
+        <div class="bluebox">
+            <p>Facebook is <span id="great">great</span>.</p>
+            <p class="orange">Blah blah blah</p>
+            <p>Paragraph3</p>
+        </div>
+        <div class="yellowbox">
+            <p>Apple</p>
+            
+            <ul>
+                <li>BMW</li>
+                <li>Audi</li>
+                <li>Mercedes</li>
+            </ul>
+            
+            <p><a href="http://www.google.com">This is a link</a></p>
+            <p><a href="http://www.youtube.com">This is another link</a></p>
+        </div>
+        
+        <div><p>asdasd</p></div>
+        
+        <div class="greenbox">
+            <p>Microsoft</p>
+            
+            <ul>
+                <li>BMW</li>
+                <li>Audi</li>
+                <li>Mercedes</li>
+            </ul>
+            
+            <table>
+            
+                <tr>
+                    <th>Phone make</th>
+                    <th>Model</th>
+                    <th>Memory</th>
+                </tr>
+                <tr>
+                    <th>Apple</th>
+                    <th>iPhone</th>
+                    <th>256GB</th>
+                </tr>
+                <tr>
+                    <th>Google</th>
+                    <th>Pixel 4</th>
+                    <th>512GB</th>
+                </tr>
+                <tr>
+                    <th>Apple</th>
+                    <th>iPhone</th>
+                    <th>256GB</th>
+                </tr>
+                <tr>
+                    <th>Google</th>
+                    <th>Pixel 4</th>
+                    <th>512GB</th>
+                </tr>
+                
+                
+                
+            </table>
+            <p>Type your name: <input type="text"><button type="submit">Submit</button></p>
+        </div>
+    
+        <script>
+        
+            $(function(){
+                $("*").css("font-size",'16px');
+                $("p").css("text-align","center");
+//                $("div ~ p").css("text-align","center");
+//                $("div p").css("text-align","center");
+                $(".orange").css("background-color","orange");
+                $("#great").css("background-color","black");
+                $("div.bluebox").css("font-family","sans-serif")
+                
+                $("p:first-child, p:last-child").css("text-decoration","underline");
+                
+                $("[href]").css("color","red");
+                
+                $("li:first-child").css("background-color", "green");
+                $("li:last-child").css("background-color","white");
+                $("th:even").css("background-color","red");
+                
+                $(":input").css("color","red");
+                $(":Submit").css("color","blue");
+//                $("p:last-child").css("text-decoration","underline");
+                
+                $("div:has(table)").css("background-color","purple");
+            });
+            
+            
+            
+        </script>
+    </body>
+
+
+</html>
